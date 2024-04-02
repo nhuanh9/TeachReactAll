@@ -28,14 +28,22 @@ class CComponent extends Component {
 
     render() {
         return (
-            <h1>
-                Classsss Component {this.state.x}
+            <>
+                <h1>
+                    Classsss Component {this.state.x}
+                </h1>
                 {console.log(1)}
-                <button onClick={()=> {
-                    this.setState({x: this.state.x++})
-                }}>X++</button>
-            </h1>
+                <button onClick={() => {
+                    this.setState(state => {
+                        return {
+                            x: state.x+1
+                        }
+                    })
+                }}>X++
+                </button>
+            </>
         )
     }
 }
+
 export default CComponent;
