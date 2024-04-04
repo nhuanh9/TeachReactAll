@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from "./component/Navbar";
 
-let x = 20;
 function App() {
   return (
-    <h1>Hello C10 {x}</h1>
+      <>
+      <Navbar></Navbar>
+      </>
   );
 }
-// Hien 1 doi tuong
-// Hien 1 mang
-// Hien 1 mang doi tuong
 export default App;
+//npm i react-router-dom
+//npm i react-router
