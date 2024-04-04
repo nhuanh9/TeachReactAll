@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from "./component/Navbar";
+import AddProduct from "./pages/home/product/AddProduct";
 
 function App() {
   return (
       <>
-      <Navbar></Navbar>
+      <AddProduct></AddProduct>
       </>
   );
 }
