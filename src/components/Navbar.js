@@ -14,13 +14,10 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <Link className="nav-link" href="#" to={'/home'}>Home <span className="sr-only">(current)</span></Link>
+                                <Link className="nav-link" to={''}>Home <span className="sr-only">(current)</span></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="#" to={'product'}>Product</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" href="#" to={'order'}>Order</Link>
+                                <Link className="nav-link" to={'order'}>Order</Link>
                             </li>
                         </ul>
                     </div>
