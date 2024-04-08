@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 import {ErrorMessage, Field, Form, Formik} from "formik";
+import './AddProduct.css'
 const VALIDATE_SCHEMA = Yup.object().shape({
     name: Yup.string()
         .required("Bạn phải nhập tên"),
@@ -15,7 +16,6 @@ export default function AddProduct() {
                 category: 0
             }} onSubmit={values => {
                 console.log({...values, category: {id: values.category}})
-                // axios.post...()
             }} validationSchema={VALIDATE_SCHEMA}
             >
                 <Form>
@@ -23,7 +23,7 @@ export default function AddProduct() {
                     <ErrorMessage name={'name'}></ErrorMessage>
                     <Field name={'price'}></Field>
                     <ErrorMessage name={'price'}></ErrorMessage>
-                    <Field name={'idCategory'}></Field>
+                    <Field name={'category'}></Field>
                     <button>Add</button>
                 </Form>
             </Formik>
