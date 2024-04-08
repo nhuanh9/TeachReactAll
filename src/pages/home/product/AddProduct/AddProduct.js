@@ -9,19 +9,28 @@ const VALIDATE_SCHEMA = Yup.object().shape({
 export default function AddProduct() {
     return (
         <>
-            <h1>Add Product page</h1>
-            <Formik initialValues={{name:'', price: ''}} onSubmit={values => {
-                console.log(values)
-            }}
-            validationSchema={VALIDATE_SCHEMA}>
+            <Formik initialValues={{
+                name:'',
+                price: 0,
+                category: 0
+            }} onSubmit={values => {
+                console.log({...values, category: {id: values.category}})
+                // axios.post...()
+            }} validationSchema={VALIDATE_SCHEMA}
+            >
                 <Form>
                     <Field name={'name'}></Field>
                     <ErrorMessage name={'name'}></ErrorMessage>
                     <Field name={'price'}></Field>
                     <ErrorMessage name={'price'}></ErrorMessage>
-                    <button>Save</button>
+                    <Field name={'idCategory'}></Field>
+                    <button>Add</button>
                 </Form>
             </Formik>
         </>
     )
 }
+
+// Formik => thu vien ho tro lam form => select / option / checkbox / radio
+// npm i formik
+// npm i yup
