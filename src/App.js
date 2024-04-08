@@ -14,6 +14,7 @@ import ListProductAdmin from "./pages/admin/product/ListProductAdmin";
 import ListUserAdmin from "./pages/admin/user/ListUserAdmin";
 import ListOrderAdmin from "./pages/admin/order/ListOrderAdmin";
 import ListOrder from "./pages/home/order/ListOrder";
+import EditProductAdmin from "./pages/admin/product/EditProductAdmin";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                         <Route path={''} element={<ListProductAdmin></ListProductAdmin>}></Route>
                         <Route path={'user'} element={<ListUserAdmin></ListUserAdmin>}></Route>
                         <Route path={'order'} element={<ListOrderAdmin></ListOrderAdmin>}></Route>
+                        <Route path={'product/edit/:id'} element={<EditProductAdmin></EditProductAdmin>}></Route>
                     </Route>
                     <Route path={'home'} element={<Home></Home>}>
                         <Route path={''} element={<ListProduct></ListProduct>}></Route>
